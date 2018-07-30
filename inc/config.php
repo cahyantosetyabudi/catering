@@ -1,23 +1,9 @@
 <?php
-	// function url(){
-	//   return sprintf(
-	//     "%s://%s%s",
-	//     isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http',
-	//     $_SERVER['SERVER_NAME'],
-	//     $_SERVER['REQUEST_URI']
-	//   );
-	// }
-	$uri = '127.0.0.1';
-	$konek = mysqli_connect($uri, "root", "", "catering");
-	if (mysqli_connect_errno())
-  {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  }else{
-  	// echo "success";
-  }
+	session_start();
+	$konek = mysqli_connect("127.0.0.1", "root", "", "catering");
 
 	// settings
-	$url = "http://".$uri."/catering/";
+	$url = "http://localhost/catering/";
 	$title = "SUSUNDAAN KITCHEN";
 	$no = 1;
 

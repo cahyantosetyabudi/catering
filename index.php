@@ -1,6 +1,7 @@
 <?php 
 	include"inc/config.php";
 	include"layout/header.php";
+	
 ?>
 <font color="black">
 		<div class="col-md-9">

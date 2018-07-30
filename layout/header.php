@@ -96,7 +96,7 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-    
+
    <?php if('http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'] == $url.'index.php'){ ?>
     <div class="container">
 

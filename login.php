@@ -1,12 +1,9 @@
 <?php 
-	
-	// session_start();
 	include"inc/config.php";
-	include"layout/header.php";
 	if(!empty($_SESSION['iam_user'])){
 		redir("index.php");
 	}
-	
+	include"layout/header.php";
 	 
 	 
 	

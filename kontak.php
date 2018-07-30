@@ -7,11 +7,23 @@
 			<div class="row">
 			<div class="col-md-12">
 			
+			<?php 
+				if(!empty($_POST)){
+			extract($_POST); 
+		
+			$q = mysqli_query($konek, "insert into kontak Values(NULL,'$nama','$email','$subjek','$pesan')");
+				if($q){  
+			?>
+			<font color="black">
+			<div class="alert alert-success">Terimakasih atas masukannya</div>
+				<?php }else{ ?>
+			<div class="alert alert-danger">Terjadi kesalahan dalam pengisian form. Data belum terkirim.</div>
+				<?php } } ?>
 			<h3><font color="black">Kontak Kami</h3>
 				<hr>
 				<div class="col-md-8 content-menu" style="margin-top:-20px;">
 				 
-				 <form action="lihatkontak.php" method="post" enctype="multipart/form-data">
+				 <form action="" method="post" enctype="multipart/form-data">
 				 <font color="black">
 						<label>Nama</label><br>
 						<input type="text" class="form-control" name="nama" required><br>
@@ -21,8 +33,7 @@
 						<input type="text" class="form-control" name="subjek" required><br>
 						<label>Pesan</label><br>
 						<textarea class="form-control" name="pesan" required></textarea><br>
-						<input type="submit" name="form-input" value="Simpan" class="btn btn-success"> 
-						<a href="lihatkontak.php"> Lihat Daftar Kontak</a>
+						<input type="submit" name="form-input" value="Simpan" class="btn btn-success">
 					</form>
 				 
 				</div>   
